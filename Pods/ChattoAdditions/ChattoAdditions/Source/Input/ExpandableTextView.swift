@@ -129,5 +129,8 @@ public class ExpandableTextView: UITextView {
         self.placeholder.textContainerInset = textContainerInset
         self.placeholder.textColor = UIColor.init(red: 149/255.0, green: 149/255.0, blue: 149/255.0, alpha: 1)
         self.placeholder.backgroundColor = UIColor.init(red: 83/255.0, green: 83/255.0, blue: 83/255.0, alpha: 1)
+        self.placeholder.layer.borderColor = UIColor.init(red: 139/255.0, green: 139/255.0, blue: 142/255.0, alpha: 1).CGColor
+        self.placeholder.layer.borderWidth = 0.5
+        self.placeholder.layer.cornerRadius = 5
     }
 }

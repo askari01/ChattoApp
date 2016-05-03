@@ -72,7 +72,7 @@ class DemoChatViewController: ChatViewController {
         var appearance = ChatInputBarAppearance()
         appearance.sendButtonTitle = NSLocalizedString("Send", comment: "")
         appearance.textPlaceholder = NSLocalizedString("Type a message", comment: "")
-        chatInputBar.layer.backgroundColor = UIColor.lightGrayColor().CGColor
+        //chatInputBar.layer.backgroundColor = UIColor.lightGrayColor().CGColor
         chatInputBar.setAppearance(appearance)
     }
     
