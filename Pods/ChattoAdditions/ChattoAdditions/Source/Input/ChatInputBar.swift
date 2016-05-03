@@ -23,7 +23,7 @@
 */
 
 import UIKit
-//import Parse
+import Parse
 
 protocol ChatInputBarDelegate: class {
     func inputBarDidBeginEditing(inputBar: ChatInputBar)
