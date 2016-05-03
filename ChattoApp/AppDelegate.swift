@@ -23,6 +23,7 @@
 */
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // EO
         initializeVerbTable()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("USWhH5SmqA4W2OHIgEogwC4ym4W2F6JapXSga6Wc", clientKey: "tDqODreOOGvIGat42Sr1CaATqF3Lqe6UpCu5HXM3")
         
         return true
     }

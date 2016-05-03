@@ -4,14 +4,8 @@ PODS:
     - Chatto
 
 DEPENDENCIES:
-  - Chatto (from `..`)
-  - ChattoAdditions (from `..`)
-
-EXTERNAL SOURCES:
-  Chatto:
-    :path: ".."
-  ChattoAdditions:
-    :path: ".."
+  - Chatto
+  - ChattoAdditions
 
 SPEC CHECKSUMS:
   Chatto: 531b14bbb7d21dfc50a86fc4ff70a90367171403

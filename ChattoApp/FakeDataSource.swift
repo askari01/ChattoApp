@@ -105,14 +105,14 @@ class FakeDataSource: ChatDataSourceProtocol {
     
     // EO up to here.
 
-    func addPhotoMessage(image: UIImage) {
-        let uid = "\(self.nextMessageId)"
-        self.nextMessageId += 1
-        let message = createPhotoMessageModel(uid, image: image, size: image.size, isIncoming: false)
-        self.messageSender.sendMessage(message)
-        self.slidingWindow.insertItem(message, position: .Bottom)
-        self.delegate?.chatDataSourceDidUpdate(self)
-    }
+//    func addPhotoMessage(image: UIImage) {
+//        let uid = "\(self.nextMessageId)"
+//        self.nextMessageId += 1
+//        let message = createPhotoMessageModel(uid, image: image, size: image.size, isIncoming: false)
+//        self.messageSender.sendMessage(message)
+//        self.slidingWindow.insertItem(message, position: .Bottom)
+//        self.delegate?.chatDataSourceDidUpdate(self)
+//    }
 
     func addRandomIncomingMessage() {
         let message = FakeMessageFactory.createChatItem("\(self.nextMessageId)", isIncoming: true)
