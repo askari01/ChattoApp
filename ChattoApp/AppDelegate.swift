@@ -33,9 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // EO
-        initializeVerbTable()
+
         
         // Initialize Parse.
         Parse.setApplicationId("USWhH5SmqA4W2OHIgEogwC4ym4W2F6JapXSga6Wc", clientKey: "tDqODreOOGvIGat42Sr1CaATqF3Lqe6UpCu5HXM3")

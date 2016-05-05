@@ -99,7 +99,11 @@ public class ExpandableTextView: UITextView {
         if selectedTextRange != nil {
             var rect = caretRectForPosition(self.selectedTextRange!.end)
             rect = CGRect(origin: rect.origin, size: CGSize(width: rect.width, height: rect.height + textContainerInset.bottom))
-
+            
+            self.placeholder.layer.borderWidth = 0.5
+            self.placeholder.layer.borderColor = UIColor.init(red: 139/255.0, green: 139/255.0, blue: 142/255.0, alpha: 1).CGColor
+            self.layer.cornerRadius = 5
+            
             self.scrollRectToVisible(rect, animated: false)
         }
     }

@@ -38,10 +38,6 @@
 		C3B0D35D1BF3C627006CF725 /* SendingStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0D35C1BF3C627006CF725 /* SendingStatusCollectionViewCell.swift */; };
 		C3B0D35F1BF3C63C006CF725 /* SendingStatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0D35E1BF3C63C006CF725 /* SendingStatusCollectionViewCell.xib */; };
 		C3B0D3611BF3C928006CF725 /* ChatItemsDemoDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0D3601BF3C928006CF725 /* ChatItemsDemoDecorator.swift */; };
-		DDF984421C77275200243D00 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF984411C77275200243D00 /* Classes.swift */; };
-		DDF984461C7728BA00243D00 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF984451C7728BA00243D00 /* Process.swift */; };
-		DDF984481C772B8C00243D00 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF984471C772B8C00243D00 /* Utility.swift */; };
-		DDF9844B1C777BB600243D00 /* ExerciseBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF9844A1C777BB600243D00 /* ExerciseBot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,10 +110,6 @@
 		C3B0D35C1BF3C627006CF725 /* SendingStatusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendingStatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3B0D35E1BF3C63C006CF725 /* SendingStatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendingStatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3B0D3601BF3C928006CF725 /* ChatItemsDemoDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemsDemoDecorator.swift; sourceTree = "<group>"; };
-		DDF984411C77275200243D00 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Classes.swift; path = German/Classes.swift; sourceTree = SOURCE_ROOT; };
-		DDF984451C7728BA00243D00 /* Process.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Process.swift; path = German/Process.swift; sourceTree = SOURCE_ROOT; };
-		DDF984471C772B8C00243D00 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = German/Utility.swift; sourceTree = SOURCE_ROOT; };
-		DDF9844A1C777BB600243D00 /* ExerciseBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseBot.swift; path = German/ExerciseBot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +199,6 @@
 		C33FBF9C1BDE441C008E3545 = {
 			isa = PBXGroup;
 			children = (
-				DDF984491C772B9B00243D00 /* German */,
 				C33FBFA71BDE441C008E3545 /* ChattoApp */,
 				C33FBFBC1BDE441C008E3545 /* ChattoAppTests */,
 				C33FBFC71BDE441C008E3545 /* ChattoAppUITests */,
@@ -275,17 +266,6 @@
 				C3B0D35E1BF3C63C006CF725 /* SendingStatusCollectionViewCell.xib */,
 			);
 			path = "Sending status";
-			sourceTree = "<group>";
-		};
-		DDF984491C772B9B00243D00 /* German */ = {
-			isa = PBXGroup;
-			children = (
-				DDF984411C77275200243D00 /* Classes.swift */,
-				DDF984451C7728BA00243D00 /* Process.swift */,
-				DDF984471C772B8C00243D00 /* Utility.swift */,
-				DDF9844A1C777BB600243D00 /* ExerciseBot.swift */,
-			);
-			name = German;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,19 +470,15 @@
 				C31E291C1BF39DE600EF5B2F /* FakePhotoMessageViewModel.swift in Sources */,
 				C3B0D3611BF3C928006CF725 /* ChatItemsDemoDecorator.swift in Sources */,
 				C33FBFAB1BDE441C008E3545 /* DemoChatViewController.swift in Sources */,
-				DDF984421C77275200243D00 /* Classes.swift in Sources */,
 				C396D98F1BF8C64900F10439 /* ConversationsViewController.swift in Sources */,
-				DDF984481C772B8C00243D00 /* Utility.swift in Sources */,
 				C3B0D35B1BF3C55E006CF725 /* SendingStatusPresenter.swift in Sources */,
 				C3B0D35D1BF3C627006CF725 /* SendingStatusCollectionViewCell.swift in Sources */,
 				C30C6EBB1BDE9BDC00D4C879 /* FakeMessageFactory.swift in Sources */,
-				DDF9844B1C777BB600243D00 /* ExerciseBot.swift in Sources */,
 				C31E291A1BF38F8A00EF5B2F /* FakeMessageSender.swift in Sources */,
 				C35A6F511BF8089C0085CA19 /* FakeDataSource.swift in Sources */,
 				C35A6F4D1BF807C10085CA19 /* SlidingDatasSource.swift in Sources */,
 				C33FBFA91BDE441C008E3545 /* AppDelegate.swift in Sources */,
 				C326C9AE1BF6424900EC4607 /* UserActionHandlers.swift in Sources */,
-				DDF984461C7728BA00243D00 /* Process.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

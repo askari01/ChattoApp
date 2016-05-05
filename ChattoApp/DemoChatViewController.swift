@@ -26,6 +26,7 @@ import UIKit
 import Chatto
 import ChattoAdditions
 import AVFoundation
+import Parse
 
 class DemoChatViewController: ChatViewController {
     
@@ -46,13 +47,6 @@ class DemoChatViewController: ChatViewController {
         super.chatItemsDecorator = ChatItemsDemoDecorator()
         let addIncomingMessageButton = UIBarButtonItem(image: image, style: .Plain, target: self, action: "addRandomIncomingMessage")
         self.navigationItem.rightBarButtonItem = addIncomingMessageButton
-        
-        // EO
-        
-        Speaker.say("Hi", lang: "en-US")
-        dataSource.addTextMessage("Hello, hello!")
-        dataSource.addInTextMessage("Well, hello!")
-        
     }
     
     @objc
@@ -72,7 +66,6 @@ class DemoChatViewController: ChatViewController {
         var appearance = ChatInputBarAppearance()
         appearance.sendButtonTitle = NSLocalizedString("Send", comment: "")
         appearance.textPlaceholder = NSLocalizedString("Type a message", comment: "")
-        //chatInputBar.layer.backgroundColor = UIColor.lightGrayColor().CGColor
         chatInputBar.setAppearance(appearance)
     }
     
@@ -84,12 +77,6 @@ class DemoChatViewController: ChatViewController {
                     interactionHandler: TextMessageHandler(baseHandler: self.baseMessageHandler)
                 )
             ],
-            //            PhotoMessageModel.chatItemType: [
-            //                PhotoMessagePresenterBuilder(
-            //                    viewModelBuilder: FakePhotoMessageViewModelBuilder(),
-            //                    interactionHandler: PhotoMessageHandler(baseHandler: self.baseMessageHandler)
-            //                )
-            //            ],
             SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
         ]
     }
@@ -97,7 +84,6 @@ class DemoChatViewController: ChatViewController {
     func createChatInputItems() -> [ChatInputItemProtocol] {
         var items = [ChatInputItemProtocol]()
         items.append(self.createTextInputItem())
-        //        items.append(self.createPhotoInputItem())
         return items
     }
     
@@ -105,15 +91,18 @@ class DemoChatViewController: ChatViewController {
         let item = TextChatInputItem()
         item.textInputHandler = { [weak self] text in
             self?.dataSource.addTextMessage(text)
+    
+            let messageDBTable = PFObject(className: "Messages")
+            messageDBTable["Sender"] = "sky@gmail.com"
+            messageDBTable["Other"] = "flower@gmail.com"
+            messageDBTable["Message"] = text
+            messageDBTable.saveInBackgroundWithBlock{
+            (success: Bool?, error: NSError?) -> Void in
+                if success == true {
+                    print("success")
+                }
+            }
         }
         return item
     }
-    
-    //    private func createPhotoInputItem() -> PhotosChatInputItem {
-    //        let item = PhotosChatInputItem(presentingController: self)
-    //        item.photoInputHandler = { [weak self] image in
-    //            self?.dataSource.addPhotoMessage(image)
-    //        }
-    //        return item
-    //    }
 }

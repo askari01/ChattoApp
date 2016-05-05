@@ -132,17 +132,6 @@ public class ChatInputBar: ReusableXibView {
         self.delegate?.inputBarSendButtonPressed(self)
         if self.inputText == "" {
             print("no text")
-        } else {
-//            let messageDBTable = PFObject(className: "Messages")
-//            messageDBTable["Sender"] = "flower@gmail.com"
-//            messageDBTable["Other"] = "sky@gmail.com"
-//            messageDBTable["Message"] = self.inputText
-//            messageDBTable.saveInBackgroundWithBlock{
-//                (success: Bool?, error: NSError?) -> Void in
-//                if success == true {
-//                    self.inputText = ""
-//                }
-//            }
         }
         self.inputText = ""
     }
@@ -169,25 +158,6 @@ extension ChatInputBar {
     }
 }
 
-//extension ChatInputBar { // Tabar
-//    public var tabBarInterItemSpacing: CGFloat {
-//        get {
-//            return self.scrollView.interItemSpacing
-//        }
-//        set {
-//            self.scrollView.interItemSpacing = newValue
-//        }
-//    }
-//
-//    public var tabBarContentInsets: UIEdgeInsets {
-//        get {
-//            return self.scrollView.contentInset
-//        }
-//        set {
-//            self.scrollView.contentInset = newValue
-//        }
-//    }
-//}
 
 // MARK: UITextViewDelegate
 extension ChatInputBar: UITextViewDelegate {

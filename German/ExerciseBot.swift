@@ -49,7 +49,7 @@ class Bot {
     }
     
     func nextQuestion() {
-        currentItem++
+        currentItem += 1
     }
     
     func showQuestion() -> String {

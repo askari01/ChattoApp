@@ -31,8 +31,6 @@ import UIKit
     public init(chatInputView: ChatInputBar, chatInputItems: [ChatInputItemProtocol]) {
         self.chatInputView = chatInputView
         self.chatInputItems = chatInputItems
-//        self.chatInputView.tabBarInterItemSpacing = 10
-//        self.chatInputView.tabBarContentInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         super.init()
 
         self.chatInputView.delegate = self

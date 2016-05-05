@@ -80,7 +80,7 @@ class FakeDataSource: ChatDataSourceProtocol {
         Can start from here. This is called when the user inputs something. 
         We can then enter the next Question and wait for the answer.
     */
-    var exercise = PossessiveBot()
+    
     
     func addTextMessage(text: String) {
         let uid = "\(self.nextMessageId)"
@@ -89,9 +89,7 @@ class FakeDataSource: ChatDataSourceProtocol {
         self.messageSender.sendMessage(message)
         self.slidingWindow.insertItem(message, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
-        addInTextMessage(exercise.showAnswer())
-        exercise.nextQuestion()
-        addInTextMessage(exercise.showQuestion())
+        
     }
     
     func addInTextMessage(text: String) {
@@ -102,17 +100,6 @@ class FakeDataSource: ChatDataSourceProtocol {
         self.slidingWindow.insertItem(message, position: .Bottom)
         self.delegate?.chatDataSourceDidUpdate(self)
     }
-    
-    // EO up to here.
-
-//    func addPhotoMessage(image: UIImage) {
-//        let uid = "\(self.nextMessageId)"
-//        self.nextMessageId += 1
-//        let message = createPhotoMessageModel(uid, image: image, size: image.size, isIncoming: false)
-//        self.messageSender.sendMessage(message)
-//        self.slidingWindow.insertItem(message, position: .Bottom)
-//        self.delegate?.chatDataSourceDidUpdate(self)
-//    }
 
     func addRandomIncomingMessage() {
         let message = FakeMessageFactory.createChatItem("\(self.nextMessageId)", isIncoming: true)

@@ -9,11 +9,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatInputBar" customModule="ChattoAdditions" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hE9-hU-Ci1">
-                    <rect key="frame" x="529" y="18" width="63" height="44"/>
+                    <rect key="frame" x="529" y="9" width="63" height="44"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" red="0.25882352941176467" green="0.83137254901960778" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
@@ -22,17 +22,17 @@
                     </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fsh-hH-hKG" userLabel="TextView" customClass="ExpandableTextView" customModule="ChattoAdditions" customModuleProvider="target">
-                    <rect key="frame" x="8" y="8" width="513" height="63"/>
+                    <rect key="frame" x="8" y="9" width="513" height="44"/>
                     <color key="backgroundColor" red="0.32156862745098036" green="0.32156862745098036" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-fp-7di" userLabel="Top border">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <rect key="frame" x="0.0" y="1" width="600" height="0.0"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="1" identifier="top-border-height" id="IIv-qg-Tlp"/>
+                        <constraint firstAttribute="height" identifier="top-border-height" id="IIv-qg-Tlp"/>
                     </constraints>
                 </view>
             </subviews>
@@ -42,12 +42,12 @@
                 <constraint firstItem="hE9-hU-Ci1" firstAttribute="leading" secondItem="fsh-hH-hKG" secondAttribute="trailing" constant="8" symbolic="YES" id="7wP-g3-vcN"/>
                 <constraint firstItem="hE9-hU-Ci1" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="CJ7-73-YKj"/>
                 <constraint firstItem="hE9-hU-Ci1" firstAttribute="centerY" secondItem="fsh-hH-hKG" secondAttribute="centerY" id="GXW-eX-h1o"/>
-                <constraint firstItem="fsh-hH-hKG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="ZsI-iu-9nR"/>
-                <constraint firstItem="hE9-hU-Ci1" firstAttribute="top" secondItem="b1n-fp-7di" secondAttribute="bottom" constant="17" id="b51-dj-DUP"/>
+                <constraint firstItem="fsh-hH-hKG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="9" id="ZsI-iu-9nR"/>
+                <constraint firstItem="hE9-hU-Ci1" firstAttribute="top" secondItem="b1n-fp-7di" secondAttribute="bottom" constant="8" id="b51-dj-DUP"/>
                 <constraint firstAttribute="trailing" secondItem="b1n-fp-7di" secondAttribute="trailing" id="lmb-AV-eyD"/>
                 <constraint firstItem="b1n-fp-7di" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mci-2b-Z7f"/>
-                <constraint firstItem="hE9-hU-Ci1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="r7i-9F-Dxo"/>
-                <constraint firstItem="b1n-fp-7di" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sKU-B2-FjZ"/>
+                <constraint firstItem="hE9-hU-Ci1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="1" id="r7i-9F-Dxo"/>
+                <constraint firstItem="b1n-fp-7di" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="sKU-B2-FjZ"/>
                 <constraint firstAttribute="trailing" secondItem="fsh-hH-hKG" secondAttribute="trailing" constant="79" id="vVY-rg-Rwc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -58,7 +58,7 @@
                 <outlet property="textView" destination="fsh-hH-hKG" id="QMH-G9-ADs"/>
                 <outlet property="topBorderHeightConstraint" destination="IIv-qg-Tlp" id="qiB-dH-AHS"/>
             </connections>
-            <point key="canvasLocation" x="-341" y="68.5"/>
+            <point key="canvasLocation" x="-341" y="68"/>
         </view>
     </objects>
 </document>
