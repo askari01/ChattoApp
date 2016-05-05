@@ -49,14 +49,6 @@ final class ChatItemsDemoDecorator: ChatItemsDecoratorProtocol {
                 } else {
                     showsTail = true
                 }
-
-                if self.showsStatusForMessage(currentMessage) {
-                    additionalItems.append(
-                        DecoratedChatItem(
-                            chatItem: SendingStatusModel(uid: "\(currentMessage.uid)-decoration-status", status: currentMessage.status),
-                            decorationAttributes: nil)
-                    )
-                }
             }
 
             decoratedChatItems.append(DecoratedChatItem(

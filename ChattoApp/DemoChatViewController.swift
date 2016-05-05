@@ -45,7 +45,7 @@ class DemoChatViewController: ChatViewController {
         super.viewDidLoad()
         let image = UIImage(named: "bubble-incoming-tail-border", inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)?.bma_tintWithColor(UIColor.lightGrayColor())
         super.chatItemsDecorator = ChatItemsDemoDecorator()
-        let addIncomingMessageButton = UIBarButtonItem(image: image, style: .Plain, target: self, action: "addRandomIncomingMessage")
+        let addIncomingMessageButton = UIBarButtonItem(image: image, style: .Plain, target: self, action: #selector(addRandomIncomingMessage))
         self.navigationItem.rightBarButtonItem = addIncomingMessageButton
     }
     
@@ -76,8 +76,7 @@ class DemoChatViewController: ChatViewController {
                     viewModelBuilder: TextMessageViewModelDefaultBuilder(),
                     interactionHandler: TextMessageHandler(baseHandler: self.baseMessageHandler)
                 )
-            ],
-            SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
+            ]
         ]
     }
     
